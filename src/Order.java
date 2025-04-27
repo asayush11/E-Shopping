@@ -5,11 +5,11 @@ import java.util.List;
 public class Order {
     private final String id;
     private final User user;
-    private final List<OrderItem> items;
+    private final List<Item> items;
     private final double totalAmount;
     private OrderStatus status;
 
-    public Order(String id, User user, List<OrderItem> items) {
+    public Order(String id, User user, List<Item> items) {
         this.id = id;
         this.user = user;
         this.items = items;
@@ -23,6 +23,7 @@ public class Order {
 
     public void setStatus(OrderStatus status) {
         this.status = status;
+        System.out.println("Order ID: " + this.id + " status updated to: " + status);
     }
 
     public String getId() {
@@ -33,7 +34,7 @@ public class Order {
         return user;
     }
 
-    public List<OrderItem> getItems() {
+    public List<Item> getItems() {
         return items;
     }
 
