@@ -1,12 +1,10 @@
 package src;
 
-import java.util.List;
-
-public class OrderItem {
-    private Product product;
+public class Item {
+    private final Product product;
     private int quantity;
 
-    public OrderItem(Product product, int quantity) {
+    public Item(Product product, int quantity) {
         this.product = product;
         this.quantity = quantity;
     }
@@ -17,5 +15,8 @@ public class OrderItem {
 
     public int getQuantity() {
         return quantity;
+    }
+    public void updateQuantity(int quantity) {
+        this.quantity += quantity;
     }
 }
